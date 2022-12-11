@@ -9,11 +9,10 @@ function AddTodoForm() {
       <input
         value={todo.title || ""}
         onChange={(e) => setTodo({ title: e.target.value })}
-        className={`form--input ${message.error ? "error" : null}`}
+        className={`form--input ${message.error === "input" ? "error" : null}`}
         contentEditable="true"
         style={{
           background,
-          border: message.error ? "1px solid #f8a3a8" : null,
         }}
       ></input>
       <FormBackground />

@@ -23,7 +23,7 @@ function AppProvider({ children }) {
   const [message, setMessage] = useState({ error: false, title: "" });
   const createTodo = () => {
     if (!todo.title) {
-      setMessage({ error: true, title: "Please type something" });
+      setMessage({ error: "input", title: "Please type something" });
     } else {
       setMessage({ error: false, title: "" });
 
@@ -39,13 +39,23 @@ function AppProvider({ children }) {
       localStorage.setItem("todolist", JSON.stringify(newTodoList));
       setTodo({ title: "" });
     }
+    setTimeout(() => {
+      setMessage({ error: false, title: "" });
+    }, 2000);
   };
   const deleteTodos = () => {
-    const newTodoList = [...todoList].filter((todo) => {
-      if (!checkedTodos.includes(todo.id)) return todo;
-    });
-    localStorage.setItem("todolist", JSON.stringify(newTodoList));
-    setTodoList(newTodoList);
+    if (checkedTodos.length === 0) {
+      setMessage({ error: "checked", title: "No todo is selected" });
+    } else {
+      const newTodoList = [...todoList].filter((todo) => {
+        if (!checkedTodos.includes(todo.id)) return todo;
+      });
+      localStorage.setItem("todolist", JSON.stringify(newTodoList));
+      setTodoList(newTodoList);
+    }
+    setTimeout(() => {
+      setMessage({ error: false, title: "" });
+    }, 2000);
   };
   const handleBackgroundClick = (color) => {
     setBackground(color);
