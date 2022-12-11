@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: "Varela Round", sans-serif;
+  font-size: 62.5%;
+}
+#root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom right,
+    #bfb2f3,
+    #96caf7,
+    #9cdcaa,
+    #e5e1ab,
+    #f3c6a5,
+    #f8a3a8
+  );
+}
+@font-face {
+  font-family: shiny-flake;
+  src: url(./public/fonts/ShinyFlakesRegular-8M23Z.ttf);
+}

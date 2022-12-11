@@ -1,0 +1,39 @@
+.form--input {
+  position: relative;
+  margin-top: 2rem;
+  box-sizing: border-box;
+  border: none;
+  width: 80%;
+  padding: 1rem;
+  min-height: 8rem;
+  height: auto;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  resize: none;
+  overflow: hidden;
+  box-shadow: 0 0 50px 2px #ccc;
+  background: rgba(255, 255, 255, 0.75);
+  color: #000;
+  border: none;
+  outline: none;
+}
+
+.error {
+  animation: shake 0.2s ease-in-out 0s 2;
+  box-shadow: 0 0 0.5em red;
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 0rem;
+  }
+  25% {
+    margin-left: 0.5rem;
+  }
+  75% {
+    margin-left: -0.5rem;
+  }
+  100% {
+    margin-left: 0rem;
+  }
+}

@@ -1,0 +1,42 @@
+.todos {
+  color: #96caf7;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.todo--list {
+  width: 80%;
+  height: 80%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.message {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(248, 163, 168, 0.75);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(248, 163, 168, 1);
+}

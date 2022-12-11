@@ -1,0 +1,9 @@
+.form--background {
+  padding: 1rem;
+  width: 80%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
